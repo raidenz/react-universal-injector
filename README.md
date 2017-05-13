@@ -6,3 +6,12 @@
 
 ### redux concept
   - https://github.com/alexnm/re-ducks
+
+### SEO
+	- use helmet # if you create dashboard you can remove it
+
+### Todo
+	- validatorjs
+	- modular action and reducer
+
+### Changelog Idea
