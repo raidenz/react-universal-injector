@@ -8,15 +8,15 @@ export const userActions = {
   RESET,
 };
 
-export function setUser(payload){
+export function setUser(payload) {
   return {
-    type: SET
-  , payload
-  }
+    type: SET,
+    payload,
+  };
 }
 
-export function resetUser(){
+export function resetUser() {
   return {
-    type: RESET
-  }
+    type: RESET,
+  };
 }
