@@ -1,19 +1,19 @@
 doctype html
 html(lang='en')
   head
-    meta(charset='utf-8')
+    block helmet
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel='shortcut icon' href='favicons/favicon.ico')
-    link(href=(maincss) || '' rel='stylesheet')
-    block title
-      title= title
+    link(rel='shortcut icon' href='public/favicon.ico')
+
     block style
-    block headerscripts
+      link(href=(maincss) || '' rel='stylesheet')
+
   body
     noscript
       Please enable javascript for this page
-    #root!= RRR
+
+    block content
 
     block footerscripts
+    script(type='text/javascript' src=(mainjs) || '')
 
-    script(type='text/javascript' src=(rFootScript) || '')

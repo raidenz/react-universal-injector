@@ -1,1 +1,9 @@
 extends layout
+
+block helmet
+  | !{helmet.title && helmet.title.toString()}
+  | !{helmet.meta && helmet.meta.toString()}
+
+block content
+  #root!= ReactApp
+

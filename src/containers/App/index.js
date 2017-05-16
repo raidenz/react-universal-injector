@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { setUser } from 'actions'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Helmet } from 'react-helmet';
+
+import { setUser } from 'actions';
 
 import './App.css';
 
@@ -12,8 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Helmet>
+          <title>My Title App from Helmet</title>
+        </Helmet>
         <h1>Index page</h1>
-        <p>{'Email: ' + this.props.user.email}</p>
+        <p>{ `Email:  ${this.props.user.email}` }</p>
       </div>
     );
   }
@@ -21,17 +26,17 @@ class App extends Component {
 
 // export default App;
 const mapStateToProps = state => ({
-  user: state.user
-})
+  user: state.user,
+});
 
 const matchDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    dispatchUserActions: setUser
+    dispatchUserActions: setUser,
     // dispatchFetchDepartment: fetchDepartment,
-  },dispatch);
-}
+  }, dispatch);
+};
 
 export default connect(
   mapStateToProps,
-  matchDispatchToProps
-)(App)
+  matchDispatchToProps,
+)(App);
