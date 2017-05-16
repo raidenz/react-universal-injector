@@ -15,3 +15,14 @@
 	- modular action and reducer
 
 ### Changelog Idea
+
+### Todo
+	- container
+		- Single
+			- index.js
+			- Single.scss >> will convert to css
+			- Single.css >> same as component name
+			- Validation.js
+			- InitialState.js >> validatorjs
+			- Action.js
+			- Reducer.js
